@@ -1,16 +1,16 @@
 import requests
 import pandas as pd
-import os
+#import os
 
-token=os.getenv("API_TOKEN")
-print(f"Token : {token}")
-if token=="12345abcdef":
-    print("correct")
-else:
-    print("Incorrect")
+#token=os.getenv("API_TOKEN")
+#print(f"Token : {token}")
+#if token=="12345abcdef":
+#    print("correct")
+#else:
+#    print("Incorrect")
 
-#response=requests.get("https://jsonplaceholder.typicode.com/users")
-#data=response.json()
-#df=pd.DataFrame(data)
-#df=df[["id","name"]]
-#print(df)
+response=requests.get("https://jsonplaceholder.typicode.com/users")
+data=response.json()
+df=pd.DataFrame(data)
+df=df[["id","name"]]
+print(df)
